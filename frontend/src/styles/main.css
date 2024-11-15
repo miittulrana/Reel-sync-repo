@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Logo styles */
+.logo-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.logo-container img {
+    order: 1;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Tagline styles */
+.tagline-primary {
+    order: 2;
+    font-size: 40px;  /* Adjust this value for text size */
+    color: #333333;
+    font-weight: normal;
+    gap: 0px;
+}
+
+.tagline-secondary {
+    order: 3;
+    font-size: 40px;  /* Adjust this value for text size */
+    color: #000000;
+    font-weight: medium;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .logo-container img {
+    max-width: 500px;
+  }
+  
+  .tagline-primary,
+  .tagline-secondary {
+    font-size: 36px;  /* Smaller text for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-container img {
+    max-width: 200px;
+  }
+}
